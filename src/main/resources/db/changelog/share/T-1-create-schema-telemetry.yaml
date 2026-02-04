@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: T-1-create-schema-telemetry
+      author: NikishinEvgeniy
+      changes:
+        - sql:
+            CREATE SCHEMA IF NOT EXISTS telemetry;

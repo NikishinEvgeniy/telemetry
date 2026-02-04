@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/telemetry_db
+    password: test_password
+    username: test_user

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: share/T-1-create-schema-telemetry.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: find/T-1-create-table-device.yaml
+      relativeToChangelogFile: true
