@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: T-1-create-table-device
+      author: NikishinEvgeniy
+      changes:
+        - createTable:
+            tableName: devices
+            schemaName: telemetry
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: devices_id_primary_key
+              - column:
+                  name: name
+                  type: varchar2
+                  constraints:
+                    unique: true
+                    nullable: false
