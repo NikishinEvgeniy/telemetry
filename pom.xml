@@ -19,15 +19,34 @@
     <properties>
         <java.version>21</java.version>
         <preliquibase.version>1.6.0</preliquibase.version>
+        <lombok.version>1.18.42</lombok.version>
+        <spring-data-jpa.version>4.0.2</spring-data-jpa.version>
     </properties>
 
     <dependencies>
-        <!--        -->
+        <!-- region DataBase      -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
-        <!---->
+
+        <!-- region spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data-jpa.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--endregion-->
+
+        <!-- region spring-boot-starter-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--endregion-->
         <!--Test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -35,18 +54,29 @@
         </dependency>
         <!---->
 
-        <!--Util-->
+        <!--region Util-->
         <dependency>
             <groupId>net.lbruun.springboot</groupId>
             <artifactId>preliquibase-spring-boot-starter</artifactId>
             <version>${preliquibase.version}</version>
         </dependency>
+
+        <!-- region lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>compile</scope>
+
+        </dependency>
+        <!--endregion-->
+
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <scope>compile</scope>
         </dependency>
-        <!---->
+        <!--endregion-->
     </dependencies>
 
     <build>
