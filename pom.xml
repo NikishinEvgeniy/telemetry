@@ -18,67 +18,60 @@
 
     <properties>
         <java.version>21</java.version>
+        <instancio.version>5.5.1</instancio.version>
         <preliquibase.version>1.6.0</preliquibase.version>
     </properties>
 
     <dependencies>
-
-        <!-- region DataBase      -->
-
+        <!-- region database-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
-
-        <!--endregion-->
-
-        <!-- region spring-boot-starter-data-jpa -->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <scope>compile</scope>
         </dependency>
-
         <!--endregion-->
-
-        <!--region Test-->
-
-        <!--region spring-boot-starter-test-->
-
+        <!--region test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-testcontainers</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.instancio</groupId>
+            <artifactId>instancio-junit</artifactId>
+            <version>${instancio.version}</version>
+            <scope>test</scope>
+        </dependency>
         <!--endregion-->
-
-        <!--region Util-->
-
+        <!--region util-->
         <dependency>
             <groupId>net.lbruun.springboot</groupId>
             <artifactId>preliquibase-spring-boot-starter</artifactId>
             <version>${preliquibase.version}</version>
         </dependency>
-
-        <!--endregion-->
-
-        <!-- region lombok -->
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>compile</scope>
         </dependency>
-
-        <!--endregion-->
-
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
             <scope>compile</scope>
         </dependency>
-
         <!--endregion-->
     </dependencies>
 
@@ -94,5 +87,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
