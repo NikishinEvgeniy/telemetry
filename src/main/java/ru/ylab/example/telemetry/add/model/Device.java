@@ -1,6 +1,7 @@
 package ru.ylab.example.telemetry.add.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -16,15 +17,16 @@ import lombok.ToString;
  */
 @Getter
 @Setter
+@Entity
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name ="devices", schema = "telemetry")
+@Table(name = "devices", schema = "telemetry")
 public class Device {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name", unique =true, nullable = false)
+    @Column(name = "name", unique = true, nullable = false)
     private String name;
 }
