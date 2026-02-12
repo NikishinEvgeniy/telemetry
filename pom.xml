@@ -24,6 +24,13 @@
     </properties>
 
     <dependencies>
+        <!--region web-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <!--endregion-->
         <!-- region database-->
         <dependency>
             <groupId>org.postgresql</groupId>
