@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import ru.ylab.example.telemetry.share.Device;
-import ru.ylab.example.telemetry.configuration.RepositoryTest;
+import ru.ylab.example.telemetry.configuration.repository.RepositoryTest;
 
 import java.util.Optional;
 

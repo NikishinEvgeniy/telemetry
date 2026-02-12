@@ -1,4 +1,4 @@
-package ru.ylab.example.telemetry.configuration;
+package ru.ylab.example.telemetry.configuration.repository;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
