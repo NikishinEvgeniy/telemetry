@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.jdbc.Sql;
-import ru.ylab.example.telemetry.configuration.RepositoryTest;
+import ru.ylab.example.telemetry.configuration.repository.RepositoryTest;
 import ru.ylab.example.telemetry.share.Device;
 
 import java.util.List;
@@ -12,8 +12,8 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RepositoryTest
-@DisplayName("Домен [Device].[list] настройка репозитория|сущности")
 @Sql(scripts = "/sql/list/device-list-repository-mock-devices.sql")
+@DisplayName("Домен [Device].[list] настройка репозитория|сущности")
 class DeviceListRepositoryTest {
 
     @Autowired
