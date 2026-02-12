@@ -1,4 +1,4 @@
-package ru.ylab.example.telemetry.add.model;
+package ru.ylab.example.telemetry.share;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
