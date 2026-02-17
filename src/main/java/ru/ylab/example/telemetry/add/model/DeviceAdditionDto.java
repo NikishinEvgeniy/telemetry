@@ -1,4 +1,4 @@
-package ru.ylab.example.telemetry.add.dto;
+package ru.ylab.example.telemetry.add.model;
 
 public record DeviceAdditionDto(String name) {
 }
