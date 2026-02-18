@@ -11,3 +11,5 @@ spring:
 
 preliquibase:
   sql-script-references: classpath:db/changelog/share/create-service-schema.sql
+cors:
+  allowed-origins: localhost:3000
