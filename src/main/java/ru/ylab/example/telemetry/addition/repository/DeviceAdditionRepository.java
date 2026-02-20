@@ -1,4 +1,4 @@
-package ru.ylab.example.telemetry.add.repository;
+package ru.ylab.example.telemetry.addition.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import ru.ylab.example.telemetry.share.Device;
