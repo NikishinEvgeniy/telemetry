@@ -1,11 +1,11 @@
-package ru.ylab.example.telemetry.add.mapper;
+package ru.ylab.example.telemetry.addition.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.ReportingPolicy;
-import ru.ylab.example.telemetry.add.model.DeviceAdditionDto;
-import ru.ylab.example.telemetry.add.model.DeviceAdditionRequest;
+import ru.ylab.example.telemetry.addition.model.DeviceAdditionDto;
+import ru.ylab.example.telemetry.addition.model.DeviceAdditionRequest;
 import ru.ylab.example.telemetry.share.Device;
 
 @Mapper( unmappedTargetPolicy = ReportingPolicy.ERROR,

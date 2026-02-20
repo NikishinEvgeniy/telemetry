@@ -1,4 +1,4 @@
-package ru.ylab.example.telemetry.add.controller;
+package ru.ylab.example.telemetry.addition.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.ylab.example.telemetry.add.model.DeviceAdditionDto;
-import ru.ylab.example.telemetry.add.model.DeviceAdditionRequest;
-import ru.ylab.example.telemetry.add.mapper.DeviceAdditionMapper;
-import ru.ylab.example.telemetry.add.service.DeviceAdditionService;
+import ru.ylab.example.telemetry.addition.model.DeviceAdditionDto;
+import ru.ylab.example.telemetry.addition.model.DeviceAdditionRequest;
+import ru.ylab.example.telemetry.addition.mapper.DeviceAdditionMapper;
+import ru.ylab.example.telemetry.addition.service.DeviceAdditionService;
 
 @RestController
 @RequiredArgsConstructor

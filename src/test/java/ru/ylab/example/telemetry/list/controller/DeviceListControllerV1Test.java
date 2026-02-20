@@ -43,7 +43,7 @@ class DeviceListControllerV1Test {
     @Test
     @SneakyThrows
     @DisplayName("Домен [Device].[list] проверка корректной работы всего функционала")
-    void shouldReturnDeviceListResponseWhenIncomingIsDevicesRequest() {
+    void shouldReturnDeviceListResponseWhenIncomingDevicesGetRequest() {
         // Arrange
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/v1/devices");
 

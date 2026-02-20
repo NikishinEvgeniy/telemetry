@@ -1,4 +1,4 @@
-package ru.ylab.example.telemetry.add.repository;
+package ru.ylab.example.telemetry.addition.repository;
 
 import org.instancio.Instancio;
 import org.junit.jupiter.api.DisplayName;
@@ -13,14 +13,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.instancio.Select.field;
 
 @RepositoryTest
-@DisplayName("Домен [Device].[add] настройка репозитория|сущности")
+@DisplayName("Домен [Device].[addition] настройка репозитория|сущности")
 class DeviceAdditionRepositoryTest {
 
     @Autowired
     private DeviceAdditionRepository deviceAdditionRepositoryImpl;
 
     @Test
-    @DisplayName("Домен [Device].[add] проверка корректной настройки репозитория|сущности")
+    @DisplayName("Домен [Device].[addition] проверка корректной настройки репозитория|сущности")
     void shouldSuccessfulSavedDeviceWhenIncomingDeviceAdditionRequest() {
         // Arrange
         Device device = Instancio
