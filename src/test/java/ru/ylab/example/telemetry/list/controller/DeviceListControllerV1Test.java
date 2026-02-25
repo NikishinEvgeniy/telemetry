@@ -51,7 +51,9 @@ class DeviceListControllerV1Test {
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.devices.size()").value(5));
+                .andExpect(jsonPath("$.devices.size()").value(5))
+                .andExpect(jsonPath("$.devices[*].id").exists())
+                .andExpect(jsonPath("$.devices[*].name").exists());
 
         // Assert
         verify(deviceListServiceImpl).getAllDevices();
