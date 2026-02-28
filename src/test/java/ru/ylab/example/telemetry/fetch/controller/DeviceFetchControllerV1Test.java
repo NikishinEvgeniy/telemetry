@@ -53,7 +53,8 @@ class DeviceFetchControllerV1Test {
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.name").value(expectedDeviceName));
+                .andExpect(jsonPath("$.name").value(expectedDeviceName))
+                .andExpect(jsonPath("$.id").value(deviceId));
 
         // Assert
         verify(deviceFetchServiceImpl).fetch(deviceId);
