@@ -9,8 +9,24 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - telemetry_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  keycloak:
+      image: quay.io/keycloak/keycloak:23.0
+      container_name: keycloak
+      environment:
+        - KEYCLOAK_ADMIN=admin
+        - KEYCLOAK_ADMIN_PASSWORD=admin
+        - KC_HOSTNAME=localhost
+      ports:
+        - "8081:8080"
+      command:
+        - start-dev
+      volumes:
+        - keycloak_data:/opt/keycloak/data
+      restart: unless-stopped
+
 volumes:
-  telemetry_data:
+  postgres_data:
+  keycloak_data:
